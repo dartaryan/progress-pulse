@@ -1,0 +1,9 @@
+{
+  "TITLE": "מעקב התקדמות בקורס",
+  "TOTAL_TIME": "זמן כולל",
+  "REMAINING_TIME": "זמן שנותר",
+  "WATCHED_TIME": "זמן שנצפה",
+  "CALCULATE_PROGRESS": "חשב התקדמות",
+  "REMAINING_TIME_LABEL": "זמן שנותר",
+  "TIME_AT_SPEED": "זמן ב-{{speed}}X"
+}

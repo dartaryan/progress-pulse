@@ -1,0 +1,9 @@
+{
+  "TITLE": "Kursfortschrittsverfolgung",
+  "TOTAL_TIME": "Gesamtzeit",
+  "REMAINING_TIME": "Verbleibende Zeit",
+  "WATCHED_TIME": "Gesehene Zeit",
+  "CALCULATE_PROGRESS": "Fortschritt berechnen",
+  "REMAINING_TIME_LABEL": "Verbleibende Zeit",
+  "TIME_AT_SPEED": "Zeit bei {{speed}}X"
+}

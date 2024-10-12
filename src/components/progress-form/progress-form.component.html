@@ -1,0 +1,47 @@
+<div class="container" [formGroup]="form">
+  <h1>{{ 'TITLE' | translate }}</h1>
+
+  <div class="input-group">
+    <label id="totalHours">{{ 'TOTAL_TIME' | translate }}: </label>
+    <div>
+      <input type="number" formControlName="totalHours" placeholder="HH" min="0" style="width: 70px;">
+      <span>:</span>
+      <input type="number" formControlName="totalMinutes" placeholder="MM" min="0" max="59" style="width: 70px;">
+    </div>
+  </div>
+
+  <div class="toggle-group">
+    <label>
+      <input type="radio" name="timeToggle" value="remaining" formControlName="timeToggle"
+             (change)="toggleTimeInput($event)" checked> {{ 'REMAINING_TIME' | translate }}
+    </label>
+    <label>
+      <input type="radio" name="timeToggle" value="watched" formControlName="timeToggle"
+             (change)="toggleTimeInput($event)"> {{ 'WATCHED_TIME' | translate }}
+    </label>
+  </div>
+
+  @if (form.get('timeToggle')?.value === 'remaining') {
+    <div class="input-group">
+      <label id="remainingHours">{{ 'REMAINING_TIME_LABEL' | translate }}: </label>
+      <div>
+        <input type="number" formControlName="remainingHours" placeholder="HH" min="0" style="width: 70px;">
+        <span>:</span>
+        <input type="number" formControlName="remainingMinutes" placeholder="MM" min="0" max="59" style="width: 70px;">
+      </div>
+    </div>
+  } @else {
+    <div class="input-group">
+      <label id="watchedHours">{{ 'WATCHED_TIME' | translate }}: </label>
+      <div>
+        <input type="number" formControlName="watchedHours" placeholder="HH" min="0" style="width: 70px;">
+        <span>:</span>
+        <input type="number" formControlName="watchedMinutes" placeholder="MM" min="0" max="59" style="width: 70px;">
+      </div>
+    </div>
+  }
+
+  <hr>
+
+  <button (click)="calculateProgress()">{{ 'CALCULATE_PROGRESS' | translate }}</button>
+</div>
