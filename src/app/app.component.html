@@ -1,5 +1,6 @@
-
 <app-header (switchLanguage)="switchLanguage($event)"></app-header>
-<app-progress-form (progressCalculated)="onProgressCalculated($event)"></app-progress-form>
-<app-progress-circle [percentageWatched]="percentageWatched"
-                     [remainingTimeInMinutes]="remainingTimeInMinutes"></app-progress-circle>
+<main>
+  <app-progress-form (progressCalculated)="onProgressCalculated($event)"></app-progress-form>
+  <app-progress-circle [percentageWatched]="percentageWatched"
+                       [remainingTimeInMinutes]="remainingTimeInMinutes"></app-progress-circle>
+</main>

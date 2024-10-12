@@ -1,3 +1,29 @@
+.progress-section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: rgba(30, 30, 30, 0.85);
+    border-radius: 0.75rem;
+    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
+    .progress-section {
+        width: 95%;
+        padding: 0.75rem;
+    }
+}
+
+@media (max-width: 500px) {
+    .progress-section {
+        width: 100%;
+        padding: 0.5rem;
+    }
+}
+
+
 .progress-circle {
     position: relative;
     width: 100px;
