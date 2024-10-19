@@ -3,15 +3,11 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
-    background-color: rgba(30, 30, 30, 0.85);
-    border-radius: 0.75rem;
-    box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
+    gap: 1rem;
 }
 
 @media (max-width: 768px) {
     .progress-section {
-        width: 95%;
         padding: 0.75rem;
     }
 }
@@ -30,16 +26,16 @@
     height: 100px;
 }
 
-#circleBackground {
+.circleBackground {
     fill: none;
     stroke: #333;
-    stroke-width: 5;
+    stroke-width: 10px;
 }
 
-#circleProgress {
+.circleProgress {
     fill: none;
     stroke: #ff6b6b;
-    stroke-width: 5;
+    stroke-width: 10px;
     transition: stroke-dashoffset 1s ease-in-out;
 }
 
@@ -54,6 +50,12 @@
     align-items: center;
     font-size: 1.25rem;
     font-weight: bold;
+}
+
+.remaining {
+    color: white;
+    font-weight: bold;
+    padding-bottom: 1rem;
 }
 
 .time-results {

@@ -7,7 +7,7 @@ import { TranslateModule } from '@ngx-translate/core';
     standalone: true,
     imports: [TranslateModule, ReactiveFormsModule],
     templateUrl: './progress-form.component.html',
-    styleUrl: './progress-form.component.css'
+    styleUrl: './progress-form.component.scss'
 })
 export class ProgressFormComponent {
     form: FormGroup;
@@ -16,12 +16,12 @@ export class ProgressFormComponent {
 
     constructor(private fb: FormBuilder) {
         this.form = this.fb.group({
-            totalHours: [0, [Validators.min(0)]],
-            totalMinutes: [0, [Validators.min(0), Validators.max(59)]],
-            remainingHours: [0, [Validators.min(0)]],
-            remainingMinutes: [0, [Validators.min(0), Validators.max(59)]],
-            watchedHours: [0, [Validators.min(0)]],
-            watchedMinutes: [0, [Validators.min(0), Validators.max(59)]],
+            totalHours: [null, [Validators.min(0)]],
+            totalMinutes: [null, [Validators.min(0), Validators.max(59)]],
+            remainingHours: [null, [Validators.min(0)]],
+            remainingMinutes: [null, [Validators.min(0), Validators.max(59)]],
+            watchedHours: [null, [Validators.min(0)]],
+            watchedMinutes: [null, [Validators.min(0), Validators.max(59)]],
             timeToggle: ['remaining']
         });
     }

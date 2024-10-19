@@ -1,18 +1,18 @@
 <div class="progress-section">
   <div class="progress-circle">
     <svg width="100" height="100" viewBox="0 0 100 100">
-      <circle cx="50" cy="50" r="45" id="circleBackground" />
-      <circle cx="50" cy="50" r="45" id="circleProgress"
+      <circle class="circleBackground" cx="50" cy="50" r="45"  />
+      <circle class="circleProgress" cx="50" cy="50" r="45"
               [attr.stroke-dasharray]="circleCircumference"
               [attr.stroke-dashoffset]="strokeDashoffset" />
     </svg>
     <div class="progress-text">
-      {{ percentageWatched() }}%
+{{ percentageWatched() | number:'1.2-2' }}%
     </div>
   </div>
 
   <div class="time-results">
-    <p>{{ 'REMAINING_TIME_LABEL' | translate }}: {{ formatTime(remainingTimeInMinutes()) }}</p>
+    <span class="remaining">{{ 'REMAINING_TIME_LABEL' | translate }}: {{ formatTime(remainingTimeInMinutes()) }}</span>
     <p>{{ 'TIME_AT_SPEED' | translate:{speed: '1.2'} }}: {{ formatTime(remainingTimeInMinutes() / 1.2) }}</p>
     <p>{{ 'TIME_AT_SPEED' | translate:{speed: '1.4'} }}: {{ formatTime(remainingTimeInMinutes() / 1.4) }}</p>
     <p>{{ 'TIME_AT_SPEED' | translate:{speed: '1.6'} }}: {{ formatTime(remainingTimeInMinutes() / 1.6) }}</p>

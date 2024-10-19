@@ -5,7 +5,7 @@ import { Component, output } from '@angular/core';
     standalone: true,
     imports: [],
     templateUrl: './header.component.html',
-    styleUrl: './header.component.css'
+    styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
     public switchLanguage = output<string>()

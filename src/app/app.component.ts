@@ -10,7 +10,7 @@ import { HeaderComponent } from '../components/header/header.component';
     standalone: true,
     imports: [RouterOutlet, ProgressFormComponent, ProgressCircleComponent, TranslateModule, HeaderComponent],
     templateUrl: './app.component.html',
-    styleUrl: './app.component.css',
+    styleUrl: './app.component.scss',
     providers: [TranslateService]
 })
 export class AppComponent implements OnInit {
