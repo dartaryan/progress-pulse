@@ -1,41 +1,43 @@
+@import "../../styles/global";
+@import "../../styles/global";
+
 .progress-section {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: calculateRem(16);
 }
 
 @media (max-width: 768px) {
     .progress-section {
-        padding: 0.75rem;
+        padding: calculateRem(12);
     }
 }
 
 @media (max-width: 500px) {
     .progress-section {
         width: 100%;
-        padding: 0.5rem;
+        padding: calculateRem(8);
     }
 }
 
-
 .progress-circle {
     position: relative;
-    width: 100px;
-    height: 100px;
+    width: calculateRem(100);
+    height: calculateRem(100);
 }
 
-.circleBackground {
+.circle_background {
     fill: none;
     stroke: #333;
-    stroke-width: 10px;
+    stroke-width: calculateRem(10);
 }
 
-.circleProgress {
+.circle_progress {
     fill: none;
     stroke: #ff6b6b;
-    stroke-width: 10px;
+    stroke-width: calculateRem(10);
     transition: stroke-dashoffset 1s ease-in-out;
 }
 
@@ -48,48 +50,48 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 1.25rem;
+    font-size: calculateRem(20);
     font-weight: bold;
 }
 
 .remaining {
     color: white;
     font-weight: bold;
-    padding-bottom: 1rem;
+    padding-bottom: calculateRem(16);
 }
 
 .time-results {
-    margin-top: 1rem;
+    margin-top: calculateRem(16);
     color: #b0b0b0;
     text-align: center;
 }
 
 .time-results p {
-    margin: 0.3rem 0;
+    margin: calculateRem(4.8) 0;
 }
 
 @media (max-width: 768px) {
     .progress-circle {
-        width: 80px;
-        height: 80px;
+        width: calculateRem(80);
+        height: calculateRem(80);
     }
 
     .progress-text {
-        font-size: 1rem;
+        font-size: calculateRem(16);
     }
 }
 
 @media (max-width: 500px) {
     .progress-circle {
-        width: 70px;
-        height: 70px;
+        width: calculateRem(70);
+        height: calculateRem(70);
     }
 
     .progress-text {
-        font-size: 0.875rem;
+        font-size: calculateRem(14);
     }
 
     .time-results p {
-        font-size: 0.75rem;
+        font-size: calculateRem(12);
     }
 }

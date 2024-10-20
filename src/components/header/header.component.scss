@@ -1,30 +1,30 @@
+//@import '../src/styles/global';
+@import "../../styles/global";
 
 .app-header {
-    //background: rgba(30, 30, 30, 0.85);
-    padding: 1rem;
-    border-radius: 0.75rem;
-    //box-shadow: 0 0.25rem 1.25rem rgba(0, 0, 0, 0.1);
-    gap: 4rem;
-    text-align: center;
-    color: white;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: center;
+  padding: calculateRem(16);
+  border-radius: calculateRem(12);
+  gap: calculateRem(64);
+  text-align: center;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
 }
 
 .language-selector select {
-    padding: 0.5rem;
-    background-color: #444;
-    color: white;
-    border: none;
-    border-radius: 4px;
+  padding: calculateRem(8);
+  background-color: #444;
+  color: white;
+  border: none;
+  border-radius: calculateRem(4);
 }
 
 .language-selector select:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 h2 {
-    margin: 0;
+  margin: 0;
 }

@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap');
+@import 'styles/global';
 
 html {
-  font-size: 16px;
+  font-size: calculatedRem(16)
 }
 
 body {
