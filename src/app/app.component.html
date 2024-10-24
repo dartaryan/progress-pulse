@@ -4,11 +4,11 @@
   <app-header (switchLanguage)="switchLanguage($event)"></app-header>
   <section>
 
-  <app-progress-form
+  <app-progress-form [@languageChange]="selectedLanguage()"
       (progressCalculated)="onProgressCalculated($event)">
   </app-progress-form>
 
-  <app-progress-circle
+  <app-progress-circle [@languageChange]="selectedLanguage()"
       [selectedLanguage]="selectedLanguage()"
       [percentageWatched]="percentageWatched"
       [remainingTimeInMinutes]="remainingTimeInMinutes">

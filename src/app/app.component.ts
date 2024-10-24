@@ -5,6 +5,7 @@ import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../components/header/header.component';
 import { English, Language } from '../components/header/header.consts';
+import { languageChangeAnimation, textChangeAnimation } from './animations/text-animations';
 
 @Component({
     selector: 'app-root',
@@ -12,7 +13,8 @@ import { English, Language } from '../components/header/header.consts';
     imports: [RouterOutlet, ProgressFormComponent, ProgressCircleComponent, TranslateModule, HeaderComponent],
     templateUrl: './app.component.html',
     styleUrl: './app.component.scss',
-    providers: [TranslateService]
+    providers: [TranslateService],
+    animations: [textChangeAnimation,languageChangeAnimation]
 })
 export class AppComponent implements OnInit {
     title = 'ProgressPulse';

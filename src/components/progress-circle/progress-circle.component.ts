@@ -10,7 +10,6 @@ import { Language } from '../header/header.consts';
     imports: [TranslateModule, DecimalPipe],
     templateUrl: './progress-circle.component.html',
     styleUrl: './progress-circle.component.scss',
-    animations: [textChangeAnimation],
 })
 export class ProgressCircleComponent {
     public selectedLanguage = input.required<Language>();
