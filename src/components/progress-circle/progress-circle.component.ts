@@ -1,7 +1,6 @@
 import { Component, effect, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { DecimalPipe } from '@angular/common';
-import { textChangeAnimation } from '../../app/animations/text-animations';
 import { Language } from '../header/header.consts';
 
 @Component({
@@ -18,6 +17,7 @@ export class ProgressCircleComponent {
     public circleRadius: number = 45;
     public circleCircumference: number = 2 * Math.PI * this.circleRadius;
     public strokeDashoffset: number = this.circleCircumference;
+    public timeAtSpeeds = [1.2, 1.4, 1.6, 1.8, 2]
 
     constructor() {
         effect(() => {
