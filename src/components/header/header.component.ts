@@ -1,4 +1,5 @@
-import { Component, output } from '@angular/core';
+import { Component, output, signal } from '@angular/core';
+import { availableLanguages, English, Language, LanguageCodes } from './header.consts';
 
 @Component({
     selector: 'app-header',
@@ -8,13 +9,19 @@ import { Component, output } from '@angular/core';
     styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-    public switchLanguage = output<string>()
+    public switchLanguage = output<LanguageCodes>()
+    public dropdownOpen = signal(false);
+    public selectedLanguage = signal<Language>(English);
+    public languages = availableLanguages
 
+    public toggleDropdown(): void {
+        this.dropdownOpen.set(true);
+    }
 
-    public onSwitchLanguage(event:Event): void {
-        const target = event.target as HTMLSelectElement;
-        const lang = target.value;
-        this.switchLanguage.emit(lang);
+    public selectLanguage(language: Language): void {
+        this.selectedLanguage.set(language);
+        this.switchLanguage.emit(language.code);
+        this.dropdownOpen.set(false);
     }
 }
 

@@ -1,11 +1,20 @@
 <div class="app-header">
   <h2>Progress Pulse</h2>
-  <div class="language-selector">
-    <select (change)="onSwitchLanguage($event)">
-      <option value="en">En</option>
-      <option value="he">עב</option>
-      <option value="ru">Ру</option>
-      <option value="de">De</option>
-    </select>
+  <div class="language-selector" >
+    <div class="selected-language"  (click)="toggleDropdown()">
+      {{ selectedLanguage().name }}
+      <span class="dropdown-arrow">▼</span>
+    </div>
+    @if (dropdownOpen()) {
+      <ul class="dropdown-menu">
+        @for (lang of languages; track lang) {
+          <li (click)="selectLanguage(lang)">
+            {{ lang.name }}
+          </li>
+        }
+      </ul>
+    }
   </div>
 </div>
+
+

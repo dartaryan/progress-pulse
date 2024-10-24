@@ -1,7 +1,7 @@
 <div class="container" [formGroup]="form">
 
   <div class="input-group">
-    <label id="totalHours">{{ 'TOTAL_TIME' | translate }}: </label>
+    <label id="totalHours">{{ 'TOTAL_TIME' | translate }} </label>
     <div>
       <input type="number" formControlName="totalHours" placeholder="HH">
       <span> : </span>
@@ -22,7 +22,7 @@
 
   @if (form.get('timeToggle')?.value === 'remaining') {
     <div class="input-group">
-      <label id="remainingHours">{{ 'REMAINING_TIME_LABEL' | translate }}: </label>
+      <label id="remainingHours">{{ 'REMAINING_TIME_LABEL' | translate }} </label>
       <div>
         <input type="number" formControlName="remainingHours" placeholder="HH">
         <span> : </span>

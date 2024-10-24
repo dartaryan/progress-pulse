@@ -12,7 +12,7 @@
   </div>
 
   <div class="time-results">
-    <span class="remaining">{{ 'REMAINING_TIME_LABEL' | translate }}: {{ formatTime(remainingTimeInMinutes()) }}</span>
+    <span class="remaining">{{ 'REMAINING_TIME_LABEL' | translate }} {{ formatTime(remainingTimeInMinutes()) }}</span>
     <p>{{ 'TIME_AT_SPEED' | translate:{speed: '1.2'} }}: {{ formatTime(remainingTimeInMinutes() / 1.2) }}</p>
     <p>{{ 'TIME_AT_SPEED' | translate:{speed: '1.4'} }}: {{ formatTime(remainingTimeInMinutes() / 1.4) }}</p>
     <p>{{ 'TIME_AT_SPEED' | translate:{speed: '1.6'} }}: {{ formatTime(remainingTimeInMinutes() / 1.6) }}</p>

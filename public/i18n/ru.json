@@ -1,9 +1,9 @@
 {
   "TITLE": "Отслеживание прогресса курса",
-  "TOTAL_TIME": "Общее время",
+  "TOTAL_TIME": "Общее время:",
   "REMAINING_TIME": "Оставшееся время",
   "WATCHED_TIME": "Просмотренное время",
   "CALCULATE_PROGRESS": "Рассчитать прогресс",
-  "REMAINING_TIME_LABEL": "Оставшееся время",
+  "REMAINING_TIME_LABEL": "Оставшееся время:",
   "TIME_AT_SPEED": "Время при {{speed}}X"
 }

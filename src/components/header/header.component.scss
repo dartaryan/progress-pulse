@@ -1,4 +1,3 @@
-//@import '../src/styles/global';
 @import "../../styles/global";
 
 .app-header {
@@ -27,4 +26,51 @@
 
 h2 {
   margin: 0;
+}
+
+.language-selector {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+
+  .selected-language {
+    background-color: #333;
+    color: white;
+    padding: calculateRem(8);
+    border-radius: calculateRem(4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: calculateRem(120);
+    font-size: calculateRem(16);
+
+    .dropdown-arrow {
+      margin-left: calculateRem(8);
+      font-size: calculateRem(10);
+    }
+  }
+
+  .dropdown-menu {
+    background-color: #333;
+    border-radius: calculateRem(4);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: calculateRem(4) 0 0 0;
+    box-shadow: 0 calculateRem(4) calculateRem(8) rgba(0, 0, 0, 0.2);
+    z-index: 10;
+
+    li {
+      padding: calculateRem(8);
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #555;
+      }
+    }
+  }
 }
