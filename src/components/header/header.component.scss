@@ -43,6 +43,7 @@ h2 {
     justify-content: space-between;
     width: calculateRem(120);
     font-size: calculateRem(16);
+    transition: background-color 0.3s ease;
 
     .dropdown-arrow {
       margin-left: calculateRem(8);
@@ -62,11 +63,23 @@ h2 {
     margin: calculateRem(4) 0 0 0;
     box-shadow: 0 calculateRem(4) calculateRem(8) rgba(0, 0, 0, 0.2);
     z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-10%);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+
+    &.open {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+      transition: opacity 0.3s ease, transform 0.3s ease;
+    }
 
     li {
       padding: calculateRem(8);
       color: white;
       cursor: pointer;
+      transition: background-color 0.2s ease;
 
       &:hover {
         background-color: #555;

@@ -1,15 +1,19 @@
 import { Component, effect, input } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { DecimalPipe } from '@angular/common';
+import { textChangeAnimation } from '../../app/animations/text-animations';
+import { Language } from '../header/header.consts';
 
 @Component({
     selector: 'app-progress-circle',
     standalone: true,
     imports: [TranslateModule, DecimalPipe],
     templateUrl: './progress-circle.component.html',
-    styleUrl: './progress-circle.component.scss'
+    styleUrl: './progress-circle.component.scss',
+    animations: [textChangeAnimation],
 })
 export class ProgressCircleComponent {
+    public selectedLanguage = input.required<Language>();
     public percentageWatched = input<number>(0);
     public remainingTimeInMinutes = input<number>(0);
     public circleRadius: number = 45;

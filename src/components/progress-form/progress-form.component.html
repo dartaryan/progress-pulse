@@ -22,7 +22,7 @@
 
   @if (form.get('timeToggle')?.value === 'remaining') {
     <div class="input-group">
-      <label id="remainingHours">{{ 'REMAINING_TIME_LABEL' | translate }} </label>
+      <label id="remainingHours">{{ 'REMAINING_TIME' | translate }} </label>
       <div>
         <input type="number" formControlName="remainingHours" placeholder="HH">
         <span> : </span>
@@ -31,7 +31,7 @@
     </div>
   } @else {
     <div class="input-group">
-      <label id="watchedHours">{{ 'WATCHED_TIME' | translate }}: </label>
+      <label id="watchedHours">{{ 'WATCHED_TIME' | translate }} </label>
       <div>
         <input type="number" formControlName="watchedHours" placeholder="HH" min="0" style="width: 70px;">
         <span> : </span>

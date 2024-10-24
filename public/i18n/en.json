@@ -1,9 +1,9 @@
 {
   "TITLE": "Course Progress Tracker",
-  "TOTAL_TIME": "Total Time:",
+  "TOTAL_TIME": "Total Time",
   "REMAINING_TIME": "Remaining Time",
   "WATCHED_TIME": "Watched Time",
   "CALCULATE_PROGRESS": "Calculate Progress",
-  "REMAINING_TIME_LABEL": "Remaining Time:",
-  "TIME_AT_SPEED": "Time at {{speed}}X"
+  "REMAINING_TIME_LABEL": "Remaining Time: {{time}}",
+  "TIME_AT_SPEED": "Time at {{speed}}X: {{time}}"
 }

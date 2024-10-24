@@ -1,9 +1,10 @@
 import { ProgressFormComponent } from '../components/progress-form/progress-form.component';
 import { TranslateModule, TranslateService } from '@ngx-translate/core';
 import { ProgressCircleComponent } from '../components/progress-circle/progress-circle.component';
-import { Component, inject, OnInit } from '@angular/core';
+import { Component, inject, OnInit, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../components/header/header.component';
+import { English, Language } from '../components/header/header.consts';
 
 @Component({
     selector: 'app-root',
@@ -17,6 +18,7 @@ export class AppComponent implements OnInit {
     title = 'ProgressPulse';
     percentageWatched: number = 0;
     remainingTimeInMinutes: number = 0;
+    public selectedLanguage = signal<Language>(English)
     private translate = inject(TranslateService);
 
     constructor() {
@@ -25,8 +27,9 @@ export class AppComponent implements OnInit {
         this.translate.use('en');
     }
 
-    public switchLanguage(lang:string): void {
-        this.translate.use(lang);
+    public switchLanguage(lang: Language): void {
+        this.selectedLanguage.set(lang);
+        this.translate.use(lang.code);
     }
 
     public onProgressCalculated(data: { percentageWatched: number, remainingTimeInMinutes: number }): void {
